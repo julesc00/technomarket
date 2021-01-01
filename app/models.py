@@ -19,6 +19,7 @@ class Product(models.Model):
     new = models.BooleanField(default=True)
     brand = models.ForeignKey(Brand, on_delete=models.PROTECT)
     made_date = models.DateField()
+    product_image = models.ImageField(null=True, blank=True)
 
     def clean(self):
         """Return name capitalize formatted."""

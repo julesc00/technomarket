@@ -2,11 +2,17 @@
 {% load static %}
 
 {% block content %}
-    <div class="section main">
+    <!-- Section: Carousel-->
+    <section class="section main purple lighten-5">
         <div class="container">
             {% include "app/carousel.html" %}
-        <h1>Main content</h1>
     </div>
-    </div>
+    <!-- Section: Products-->
+    <section class="products grey lighten-5">
+        <div class="container">
+            {% include "app/products.html" %}
+        </div>
+    </section>
+    </section>
 
 {% endblock %}

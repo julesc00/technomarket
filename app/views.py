@@ -1,10 +1,14 @@
 from django.shortcuts import render
 
+from .models import Product
+
 
 def home(request):
+    products = Product.objects.all()
     context = {
         "title": "Tecnomarket",
-        "welcome": "Welcome to my badd-ass market!"
+        "welcome": "Welcome to my badd-ass market!",
+        "products": products
     }
     return render(request, "app/home.html", context)
 
